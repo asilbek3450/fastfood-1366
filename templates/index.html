@@ -56,16 +56,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">Bosh sahifa <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#food_section">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about_section">About</a>
+                <a class="nav-link" href="#about_section">Haqida</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#book_section">Book Table</a>
+                <a class="nav-link" href="#book_section">Joy bron qilish</a>
               </li>
             </ul>
             <div class="user_option">
@@ -132,7 +132,7 @@
                 </button>
               </form>
               <a href="" class="order_online">
-                Order Online
+                Online bron qilish
               </a>
             </div>
           </div>
@@ -150,14 +150,14 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Fast Food Restorani
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                      O‘ziga xos ta’m va sifat bilan tayyorlangan taomlar! Bugun buyurtma bering va tezkor xizmatimizdan bahramand bo‘ling.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
-                        Order Now
+                        Hoziroq buyurtma bering
                       </a>
                     </div>
                   </div>
@@ -171,14 +171,14 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Fast Food Restorani
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                      Bizning maxsus retseptlarimiz bilan tayyorlangan, yangi va sifatli taomlar! Bugun buyurtma bering va ta'mni his eting.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
-                        Order Now
+                        Hoziroq buyurtma bering
                       </a>
                     </div>
                   </div>
@@ -192,14 +192,14 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Fast Food Restorani
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                      Faqatgina yangi va tabiiy mahsulotlardan tayyorlangan mazali taomlar! Birinchi luqma bilan sifatni his eting.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
-                        Order Now
+                        Hoziroq buyurtma bering
                       </a>
                     </div>
                   </div>
@@ -235,7 +235,7 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Our Menu
+          Bizning Menyu
         </h2>
       </div>
 
@@ -334,7 +334,7 @@
       </div>
       <div class="btn-box">
         <a href="">
-          View More
+          Batafsil
         </a>
       </div>
     </div>
@@ -357,17 +357,14 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                Biz haqimizda
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              TBiz taomni nafaqat mazali, balki tez va qulay yetkazib berishni ham o‘z oldimizga maqsad qilganmiz. Menyumizda o‘ziga xos burgerlar, issiq pitsa, va shirin desertlar bor. Har bir luqma — bu muhabbat bilan yaratilgan lazzat!
             </p>
             <a href="">
-              Read More
+              Batafsil o'qish
             </a>
           </div>
         </div>
@@ -382,47 +379,29 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Book A Table
+          Joy bron qilish
         </h2>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="form_container">
-            <form action="">
+            <form action="{% url 'bosh_sahifa' %}" method="post">
+              {% csrf_token %}
               <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
+                <input name="ism" type="text" class="form-control" placeholder="Ismingiz" />
               </div>
               <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
+                <input name="telefon" type="text" class="form-control" placeholder="Telefon raqamingiz" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Your Email" />
+                <input name="soni" type="text" class="form-control" placeholder="Nechi kishi?" />
               </div>
               <div>
-                <select class="form-control nice-select wide">
-                  <option value="" disabled selected>
-                    How many persons?
-                  </option>
-                  <option value="">
-                    2
-                  </option>
-                  <option value="">
-                    3
-                  </option>
-                  <option value="">
-                    4
-                  </option>
-                  <option value="">
-                    5
-                  </option>
-                </select>
-              </div>
-              <div>
-                <input type="date" class="form-control">
+                <input name="sana" type="date" class="form-control">
               </div>
               <div class="btn_box">
                 <button>
-                  Book Now
+                  Bron qilish
                 </button>
               </div>
             </form>
@@ -444,7 +423,7 @@
     <div class="container">
       <div class="heading_container heading_center psudo_white_primary mb_45">
         <h2>
-          What Says Our Customers
+          Mijozlimiz nima deydi?
         </h2>
       </div>
       <div class="carousel-wrap row ">
@@ -453,13 +432,13 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  Xizmat juda tezkor, taomlar esa ajoyib ta’mga ega! Bu restoran mening sevimli joyimga aylandi.
                 </p>
                 <h6>
-                  Moana Michell
+                  Abdulloh Ravshanov
                 </h6>
                 <p>
-                  magna aliqua
+                  Cambridge LC
                 </p>
               </div>
               <div class="img-box">
@@ -471,13 +450,13 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  Taomlar juda mazali va tez yetkazib beriladi! Bu joyni juda yaxshi ko‘raman!”                
                 </p>
                 <h6>
-                  Mike Hamell
+                  Muhammadamin Ravshanov
                 </h6>
                 <p>
-                  magna aliqua
+                  MARS IT School
                 </p>
               </div>
               <div class="img-box">
@@ -499,7 +478,7 @@
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
             <h4>
-              Contact Us
+              Biz bilan aloqa
             </h4>
             <div class="contact_link_box">
               <a href="">
@@ -511,13 +490,13 @@
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Telefon +998 1234567890
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  bursa@gmail.com
                 </span>
               </a>
             </div>
@@ -529,7 +508,7 @@
               Feane
             </a>
             <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+              Yangi mijozlar uchun 10% chegirma!
             </p>
             <div class="footer_social">
               <a href="">
@@ -565,7 +544,7 @@
       <div class="footer-info">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
+          <a href="https://t.me/back_1366">©️ Asilbek Mirolimov</a>
         </p>
       </div>
     </div>
