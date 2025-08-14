@@ -1,3 +1,6 @@
 venv
 /venv
+.venv
+./venv
+tg_fast_food_bot-main/
 
